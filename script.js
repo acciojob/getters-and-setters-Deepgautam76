@@ -4,12 +4,6 @@ class Person {
 		this.name=name;
 		this.age=age;
    }
-	study(){
-		console.log(this.name +" is studying");
-    }
-	teach(){
-		console.log(this.name+" is teaching");
-   }
    get name(){
 	   return this.name;
    }	
@@ -41,13 +35,16 @@ class Teacher extends Person {
 		console.log(this.name+" is teaching");
 	}
 }
-Person person=new Person("John",25);
+const person=new Person("John",25);
 console.log(person.name);
-person.age(30);
-console.log(person.study());
+person.age=30;
+console.log(person.age);
 
-Teacher teacher=new Teacher("John",30);
-console.log(teacher.teach());
+const student=new Student("Alice",22);
+student.study();
+
+const teacher=new Teacher("Bob",30);
+teacher.teach();
 
 
 // Do not change the code below this line
